@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.23.1 - 2026-05-11
+
+### Changed
+- Synced plugin manifests and marketplace metadata with Vulca SDK/PyPI v0.23.1.
+- Updated Claude Code, Gemini CLI, and Codex install commands to use `vulca[mcp]==0.23.1`.
+
 ## v0.19.0-gemini-extension — 2026-05-01
 
 ### Added
