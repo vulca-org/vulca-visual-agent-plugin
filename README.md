@@ -6,7 +6,7 @@
 
 Vulca is an agent-native visual control layer for Claude Code, Gemini CLI, and Codex Desktop/CLI. It turns fuzzy creative intent into reviewable direction cards, structured prompts, semantic layers, provider-routed image work, and L1-L5 cultural evaluation.
 
-This plugin tracks the Vulca SDK v0.23.0 package shape.
+This plugin tracks the Vulca SDK v0.23.1 package shape.
 
 Repository links:
 
@@ -18,7 +18,7 @@ Repository links:
 ## Claude Code Install
 
 ```bash
-pip install "vulca[mcp] @ git+https://github.com/vulca-org/vulca.git@v0.23.0"
+pip install "vulca[mcp]==0.23.1"
 claude plugin install vulca-org/vulca-plugin
 ```
 
@@ -36,7 +36,7 @@ The bundled MCP configuration starts `vulca-mcp` from your `PATH`. Configure pro
 Gemini CLI can install this repository as an extension. The extension bundles persistent `GEMINI.md` context and starts the same local Vulca MCP server.
 
 ```bash
-pip install "vulca[mcp] @ git+https://github.com/vulca-org/vulca.git@v0.23.0"
+pip install "vulca[mcp]==0.23.1"
 gemini extensions install vulca-org/vulca-plugin
 ```
 
@@ -54,7 +54,7 @@ Gemini provider-backed workflows require your own Gemini authentication, for exa
 Codex can install this repository as a plugin marketplace. The plugin bundles the same skills and local `vulca-mcp` server configuration for Codex Desktop and Codex CLI.
 
 ```bash
-pip install "vulca[mcp] @ git+https://github.com/vulca-org/vulca.git@v0.23.0"
+pip install "vulca[mcp]==0.23.1"
 codex marketplace add https://github.com/vulca-org/vulca-plugin
 ```
 
