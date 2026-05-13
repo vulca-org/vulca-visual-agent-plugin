@@ -1,4 +1,4 @@
-# Claude Plugin Submission Packet
+# Vulca Agent Plugin Submission Packet
 
 **Plugin name:** Vulca
 **Version:** 0.23.1
@@ -14,11 +14,11 @@ Vulca is an agent-native visual control layer for discovery, structured prompts,
 
 ## Short Description
 
-Add visual discovery, decomposition, planning, and L1-L5 cultural evaluation workflows to Claude Code.
+Add visual discovery, decomposition, planning, and L1-L5 cultural evaluation workflows to Claude Code, Gemini CLI, and Codex.
 
 ## Long Description
 
-Vulca helps Claude Code users work with images through reviewable creative artifacts instead of one-shot prompting. It can explore fuzzy visual intent, produce direction cards, compose provider-aware prompts, decompose images into semantic layers, and evaluate visual results against cultural and quality criteria.
+Vulca helps agentic coding users work with images through reviewable creative artifacts instead of one-shot prompting. It can explore fuzzy visual intent, produce direction cards, compose provider-aware prompts, decompose images into semantic layers, and evaluate visual results against cultural and quality criteria.
 
 Vulca works with local files and configured image providers. Provider-backed generation, editing, and evaluation are explicit opt-in workflows.
 
@@ -54,7 +54,7 @@ python3 -m json.tool .mcp.json
 python3 -m json.tool gemini-extension.json
 ```
 
-Observed on 2026-05-11: JSON manifest validation passed; Gemini CLI extension validation passed; Codex marketplace add validation passed with a temporary `CODEX_HOME`. Claude validation commands are listed above, but `claude` was not installed on the validation machine.
+Observed on 2026-05-13: JSON manifest validation passed; Gemini CLI extension validation passed; Codex marketplace add validation passed with a temporary `CODEX_HOME` for both the local checkout and the public GitHub repository. Claude validation commands are listed above, but `claude` was not installed on the validation machine.
 
 ## Gemini CLI Extension
 
@@ -106,9 +106,9 @@ Vulca helps ChatGPT and Codex users turn fuzzy visual intent into auditable crea
 
 ### MCP Server
 
-- Production MCP URL: `https://mcp.vulcaart.art/mcp` once deployed.
-- Temporary development URL: do not submit for review with a localhost, tunnel, or other testing endpoint.
-- Authentication: unauthenticated is acceptable only for a narrow read-only/testing draft. Production should use OAuth or a scoped auth layer before public review.
+- Submitted MCP URL: `https://harryhurry-vulca-openai-mcp.hf.space/mcp`.
+- Do not submit for review with a localhost, tunnel, or other testing endpoint.
+- Authentication: the submitted remote profile is unauthenticated and limited to the review-safe, read-only tool allowlist below. Broader production workflows should use OAuth or a scoped auth layer before public review.
 
 ### Tool Summary
 
@@ -138,10 +138,10 @@ Vulca helps ChatGPT and Codex users turn fuzzy visual intent into auditable crea
 
 ## Screenshot Checklist
 
-- Plugin visible in Claude Code plugin UI.
-- `/help` or skill list showing `vulca:*` skills.
+- Plugin visible in the target client plugin UI.
+- `/help` or skill list showing Vulca skills.
 - A no-cost `/vulca:visual-discovery` run producing direction cards.
 - A no-cost `/vulca:evaluate` or rubric-only evaluation artifact.
-- Terminal capture of `claude plugin validate .`.
+- Terminal capture of validation commands for the target client.
 
 Do not include private user images, provider API keys, or hidden local paths in screenshots.
