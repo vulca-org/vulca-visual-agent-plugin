@@ -94,7 +94,7 @@ Use this packet when creating or updating the Vulca ChatGPT app draft. Do not su
 - Repository URL: https://github.com/vulca-org/vulca-plugin
 - SDK / MCP server URL: https://github.com/vulca-org/vulca
 - Website URL: https://vulcaart.art
-- Privacy policy URL: https://github.com/vulca-org/vulca-plugin/blob/main/PRIVACY.md
+- Privacy policy URL: https://vulcaart.art/chatgpt-app-privacy
 
 ### Short Description
 
