@@ -10,8 +10,8 @@ This plugin tracks the Vulca SDK v0.23.1 package shape.
 
 Repository links:
 
-- SDK / CLI / MCP server: [vulca-org/vulca](https://github.com/vulca-org/vulca)
-- Plugin package: [vulca-org/vulca-plugin](https://github.com/vulca-org/vulca-plugin)
+- SDK / CLI / MCP server: [vulca-org/vulca-visual-control-sdk](https://github.com/vulca-org/vulca-visual-control-sdk)
+- Plugin package: [vulca-org/vulca-visual-agent-plugin](https://github.com/vulca-org/vulca-visual-agent-plugin)
 - Web platform / demo: [vulcaart.art](https://vulcaart.art)
 - Directory logo: [`assets/vulca-icon.svg`](assets/vulca-icon.svg)
 
@@ -19,7 +19,7 @@ Repository links:
 
 ```bash
 pip install "vulca[mcp]==0.23.1"
-claude plugin install vulca-org/vulca-plugin
+claude plugin install vulca-org/vulca-visual-agent-plugin
 ```
 
 For local development, you can validate this repository directly:
@@ -37,7 +37,7 @@ Gemini CLI can install this repository as an extension. The extension bundles pe
 
 ```bash
 pip install "vulca[mcp]==0.23.1"
-gemini extensions install vulca-org/vulca-plugin
+gemini extensions install vulca-org/vulca-visual-agent-plugin
 ```
 
 For local development:
@@ -55,7 +55,7 @@ Codex can install this repository as a plugin marketplace. The plugin bundles th
 
 ```bash
 pip install "vulca[mcp]==0.23.1"
-codex marketplace add https://github.com/vulca-org/vulca-plugin
+codex marketplace add https://github.com/vulca-org/vulca-visual-agent-plugin
 ```
 
 For local development:
