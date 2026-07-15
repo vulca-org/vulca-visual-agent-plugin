@@ -45,7 +45,8 @@ Run from this repository:
 claude plugin validate .
 claude plugin validate .claude-plugin/plugin.json
 gemini extensions validate .
-codex marketplace add .
+codex plugin marketplace add .
+codex plugin add vulca --marketplace vulca-visual-agent-plugin
 python3 -m json.tool .claude-plugin/plugin.json
 python3 -m json.tool .codex-plugin/plugin.json
 python3 -m json.tool .agents/plugins/marketplace.json
@@ -56,6 +57,8 @@ python3 scripts/validate_plugin.py
 ```
 
 Observed on 2026-05-13: JSON manifest validation passed; Gemini CLI extension validation passed; Codex marketplace add validation passed with a temporary `CODEX_HOME` for both the local checkout and the public GitHub repository. Claude validation commands are listed above, but `claude` was not installed on the validation machine.
+
+Observed on 2026-07-15 with bundled `codex-cli 0.144.2`: local marketplace add and plugin install passed with an isolated `CODEX_HOME`. `claude 2.1.119` was installed, but both validation commands timed out after 20 seconds without output; the repository-level contract validator and Gemini validation passed.
 
 ## Gemini CLI Extension
 
@@ -74,16 +77,17 @@ This repository is also packaged as a Codex-compatible plugin marketplace. Users
 
 ```bash
 pip install "vulca[mcp]==0.23.1"
-codex marketplace add https://github.com/vulca-org/vulca-visual-agent-plugin
+codex plugin marketplace add vulca-org/vulca-visual-agent-plugin
+codex plugin add vulca --marketplace vulca-visual-agent-plugin
 ```
 
 The Codex plugin manifest is `.codex-plugin/plugin.json`, and the marketplace entry is `.agents/plugins/marketplace.json`.
 
-## OpenAI App Review Packet
+## OpenAI Plugin Review Packet
 
-OpenAI submission URL: https://platform.openai.com/apps-manage
+OpenAI submission URL: https://platform.openai.com/plugins
 
-Use this packet when creating or updating the Vulca ChatGPT app draft. Do not submit for review until the MCP server is hosted on a stable public domain; OpenAI's review flow does not accept local or testing endpoints.
+Use this packet when creating or updating the Vulca plugin draft. Do not submit the MCP-backed app portion for review until the MCP server is hosted on a stable public domain; OpenAI's review flow does not accept local or testing endpoints.
 
 ### App Metadata
 

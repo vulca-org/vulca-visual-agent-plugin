@@ -1,7 +1,7 @@
 {
-  "name": "vulca-plugin-marketplace",
+  "name": "vulca-visual-agent-plugin",
   "interface": {
-    "displayName": "Vulca Plugin Marketplace"
+    "displayName": "Vulca Visual Agent Plugin"
   },
   "plugins": [
     {

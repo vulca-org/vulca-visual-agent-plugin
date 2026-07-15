@@ -55,16 +55,18 @@ Codex can install this repository as a plugin marketplace. The plugin bundles th
 
 ```bash
 pip install "vulca[mcp]==0.23.1"
-codex marketplace add https://github.com/vulca-org/vulca-visual-agent-plugin
+codex plugin marketplace add vulca-org/vulca-visual-agent-plugin
+codex plugin add vulca --marketplace vulca-visual-agent-plugin
 ```
 
 For local development:
 
 ```bash
-codex marketplace add .
+codex plugin marketplace add .
+codex plugin add vulca --marketplace vulca-visual-agent-plugin
 ```
 
-This is a Codex-compatible marketplace package. OpenAI's official public Codex plugin directory submission flow is not documented as a public form at this time.
+This is a Codex-compatible marketplace package. Public submissions use the [OpenAI plugin submission portal](https://platform.openai.com/plugins) and require an eligible organization role plus a verified developer or business identity.
 
 ## Skills
 

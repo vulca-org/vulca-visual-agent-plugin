@@ -12,6 +12,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_URL = "https://github.com/vulca-org/vulca-visual-agent-plugin"
+CODEX_MARKETPLACE_NAME = "vulca-visual-agent-plugin"
 
 JSON_PATHS = (
     ".agents/plugins/marketplace.json",
@@ -36,6 +37,7 @@ CURRENT_REFERENCE_PATHS = (
 LEGACY_REFERENCE_PATTERNS = (
     re.compile(r"vulca-org/vulca-plugin\b"),
     re.compile(r"github\.com/vulca-org/vulca(?:[/?#]|$)"),
+    re.compile(r"\bcodex marketplace\b"),
 )
 
 
@@ -88,6 +90,17 @@ def validate() -> list[str]:
     }
     if name_values != {"vulca"}:
         errors.append(f"internal plugin identity must remain 'vulca': {name_values}")
+
+    codex_marketplace = documents[".agents/plugins/marketplace.json"]
+    if codex_marketplace.get("name") != CODEX_MARKETPLACE_NAME:
+        errors.append(
+            "Codex marketplace name must match the repository identity: "
+            f"expected {CODEX_MARKETPLACE_NAME!r}, "
+            f"got {codex_marketplace.get('name')!r}"
+        )
+    codex_plugins = codex_marketplace.get("plugins", [])
+    if len(codex_plugins) != 1 or codex_plugins[0].get("name") != "vulca":
+        errors.append("Codex marketplace must expose exactly one plugin named 'vulca'")
 
     repository_fields = {
         ".claude-plugin/plugin.json homepage": documents[
